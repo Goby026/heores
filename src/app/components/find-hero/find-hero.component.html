@@ -1,0 +1,10 @@
+<div class="alert alert-dismissible alert-danger animated fadeIn" 
+*ngIf="heroes.length <= 0">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Error! </strong> <a href="#" class="alert-link">no se encontraron coincidencias con  {{ texto }}</a>
+</div>
+<h1 class="animated fadeIn">Héroes <small>Marvel y DC</small></h1>
+<hr>
+<div class="card-columns">
+        <app-heroe-tarjeta *ngFor="let heroe of heroes; let i = index" [heroe]="heroe" [index]="i"></app-heroe-tarjeta>
+</div>
